@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let celda = tableView.dequeueReusableCell(withIdentifier: "CellResultadoPelicula") as! CeldaPeliculaController
+        let celda = tableView.dequeueReusableCell(withIdentifier: "CellPelicula") as! CeldaPeliculaController
         celda.lblTitulo.text =
             Datos.resultadosPeliculas[indexPath.row].titulo
         celda.lblAño.text = "\(Datos.resultadosPeliculas[indexPath.row].año)"
@@ -33,21 +33,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return celda
     }
     
-    
-    
-    
-    
+    //Outlets
     @IBOutlet weak var tvResultado: UITableView!
     @IBOutlet weak var txtbuscar: UITextField!
     @IBOutlet weak var cargando: UIActivityIndicatorView!
+    
+    let urlBase = "https://omdbapi.com/?apikey=1d2750f9&s="
+    
+    //actions
     @IBAction func BuscarPelicula(_ sender: Any) {
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        Alamofire.request("https://omdbapi.com/?apikey=1d2750f9&s=godfather").responseJSON{
+        cargando.startAnimating()
+        var busqueda = txtbuscar.text!
+        busqueda = busqueda.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+        
+        Alamofire.request("\(urlBase)\(busqueda)").responseJSON{
             response in
             
             Datos.resultadosPeliculas.removeAll()
@@ -62,13 +62,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             let nuevoResultado =
                                 Pelicula(diccionario: dictResultado)
                             
-                                Datos.resultadosPeliculas.append(nuevoResultado)
+                            Datos.resultadosPeliculas.append(nuevoResultado)
                         }
                     }
                     self.tvResultado.reloadData()
                 }
             }
+            self.cargando.stopAnimating()
         }
+        
+    }
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+      
         
     }
 

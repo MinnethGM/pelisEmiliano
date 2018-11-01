@@ -30,7 +30,14 @@ class Pelicula {
         
         if let valorAño = diccionario.value(forKey: "Year")as?
             String {
-            año = Int (valorAño)!
+            let indiceFinal = valorAño.index(valorAño.startIndex, offsetBy: 4)
+            año = Int(valorAño[..<indiceFinal])!
         }
+        
+        if let imdbID = diccionario.value(forKey: "imdbID") as? String {
+            self.id = mdbID
+        }
+        
     }
+    
 }

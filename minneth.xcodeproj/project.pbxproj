@@ -19,6 +19,7 @@
 		3D70B294218A0160002334F3 /* CeldaPeliculaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D70B293218A0160002334F3 /* CeldaPeliculaController.swift */; };
 		3D70B2D0218A129D002334F3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D70B2A2218A0CE6002334F3 /* Alamofire.framework */; };
 		3D70B2D1218A129D002334F3 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D70B2A2218A0CE6002334F3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DB5DF9E218B966700087952 /* DetallesPeliculaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB5DF9D218B966700087952 /* DetallesPeliculaController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		3D70B293218A0160002334F3 /* CeldaPeliculaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPeliculaController.swift; sourceTree = "<group>"; };
 		3D70B296218A0CE6002334F3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
 		3D70B2B0218A0CF8002334F3 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3DB5DF9D218B966700087952 /* DetallesPeliculaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesPeliculaController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 		3D70B24F2189FEFC002334F3 = {
 			isa = PBXGroup;
 			children = (
+				3D70B290218A0085002334F3 /* Help */,
 				3D70B25A2189FEFC002334F3 /* minneth */,
 				3D70B26F2189FEFE002334F3 /* minnethTests */,
 				3D70B27A2189FEFE002334F3 /* minnethUITests */,
@@ -229,7 +232,6 @@
 			children = (
 				3D70B2AF218A0CF0002334F3 /* peliculas */,
 				3D70B2672189FEFE002334F3 /* Info.plist */,
-				3D70B290218A0085002334F3 /* Help */,
 				3D70B28D2189FF55002334F3 /* Resourses */,
 				3D70B28C2189FF4E002334F3 /* App */,
 				3D70B28B2189FF3F002334F3 /* ViewController */,
@@ -278,8 +280,8 @@
 		3D70B28B2189FF3F002334F3 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3D70B25D2189FEFC002334F3 /* ViewController.swift */,
 				3D70B293218A0160002334F3 /* CeldaPeliculaController.swift */,
+				3DB5DF9D218B966700087952 /* DetallesPeliculaController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -294,7 +296,6 @@
 		3D70B28D2189FF55002334F3 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
-				3D70B2622189FEFE002334F3 /* Assets.xcassets */,
 				3D70B296218A0CE6002334F3 /* Alamofire.xcodeproj */,
 			);
 			path = Resourses;
@@ -304,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				3D70B291218A0099002334F3 /* Datos.swift */,
+				3D70B2622189FEFE002334F3 /* Assets.xcassets */,
 			);
 			path = Help;
 			sourceTree = "<group>";
@@ -325,6 +327,7 @@
 		3D70B2AF218A0CF0002334F3 /* peliculas */ = {
 			isa = PBXGroup;
 			children = (
+				3D70B25D2189FEFC002334F3 /* ViewController.swift */,
 				3D70B2B0218A0CF8002334F3 /* Alamofire.xcodeproj */,
 			);
 			name = peliculas;
@@ -590,6 +593,7 @@
 			files = (
 				3D70B28F2189FF78002334F3 /* Pelicula.swift in Sources */,
 				3D70B292218A0099002334F3 /* Datos.swift in Sources */,
+				3DB5DF9E218B966700087952 /* DetallesPeliculaController.swift in Sources */,
 				3D70B25E2189FEFC002334F3 /* ViewController.swift in Sources */,
 				3D70B25C2189FEFC002334F3 /* AppDelegate.swift in Sources */,
 				3D70B294218A0160002334F3 /* CeldaPeliculaController.swift in Sources */,
